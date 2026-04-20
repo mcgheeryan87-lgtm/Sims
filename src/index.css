@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-900 overflow-hidden;
+    background-color: #A5C9EA;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='white' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m7 7 10 10-5 5L7 7Z'/%3E%3C/svg%3E"), auto;
+  }
+}
+
+.game-bg {
+  background: linear-gradient(180deg, #87CEEB 0%, #E0F7FA 100%);
+}
+
+.hud-glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 2px solid #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.plumbob-glow {
+  box-shadow: 0 0 15px #4AF012;
+}
+
+.currency-pill {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
